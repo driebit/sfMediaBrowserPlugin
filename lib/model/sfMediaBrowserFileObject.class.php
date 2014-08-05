@@ -36,15 +36,8 @@ class sfMediaBrowserFileObject
     
     $this->directory_separator = DIRECTORY_SEPARATOR;
 
-    // $file is absolute
-    if($absolute = realpath($file))
-    {
-      $this->file_url = preg_replace('`^('.$this->root_path.')`', '', $absolute);
-    }
-    else
-    {
-      $this->file_url = $file;
-    }
+    $this->file_url = $file;
+
   }
   
 
